@@ -95,6 +95,9 @@ class PokeApiShell extends Shell
      * @param array $pokemonFormatedData formated data
      * @return void
      */
+    /**
+     * Bien pensez à rendre les champs de sprites "Nullable"
+     */
     protected function _createPokemon($pokemonFormatedData)
     {
         $pokemon = $this->Pokemons->newEntity($pokemonFormatedData);
