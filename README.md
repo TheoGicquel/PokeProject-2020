@@ -2,6 +2,6 @@
 
 ## Groupe N° 3 et 5 :
 * François Valentin G5
-* Nom Prenom
-* Nom Prenom
-* Nom Prenom
+* GICQUEL Théo G3
+* GUILLAUME Maxime G3
+* MOCQUET Julien G3
