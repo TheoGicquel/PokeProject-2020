@@ -1,7 +1,7 @@
 # Projet Web Iut Info module Web 2020
 
 
-- Groupe N°3 et 5 :
+### Groupe N°3 et 5 :
 - François Valentin G5
 - GICQUEL Théo G3
 - GUILLAUME Maxime G3
