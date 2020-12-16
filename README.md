@@ -1,11 +1,11 @@
 # Projet Web Iut Info module Web 2020
 
 
-(A renseigner)
-- Groupe N° :
-- Nom Prenom
-- Nom Prenom
-- Nom Prenom
+### Groupe N°3 et 5 :
+- FRANÇOIS Valentin G5
+- GICQUEL Théo G3
+- GUILLAUME Maxime G3
+- MOCQUET Julien G3
 
 
 ## Récupération du projet
