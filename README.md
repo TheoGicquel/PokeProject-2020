@@ -1,11 +1,13 @@
 # Projet Web Iut Info module Web 2020
 
+[index](README.md)				[Guide d'installation](guide_installation.md)
 
 ### Groupe N°3 et 5 :
-- FRANÇOIS Valentin G5
-- GICQUEL Théo G3
-- GUILLAUME Maxime G3
-- MOCQUET Julien G3
+
+- [FRANÇOIS Valentin G5](https://gitlab.com/Skuorpion)
+- [GICQUEL Théo G3](http://gitlab.com/theogicquel)
+- [GUILLAUME Maxime G3](https://gitlab.com/maxxou)
+- [MOCQUET Julien G3](https://gitlab.com/Jujugibus)
 
 
 ## Récupération du projet
