@@ -63,6 +63,7 @@
                 <div class="table-responsive">
                     <table>
                         <tr>
+                            <th><?= __('Name Stats') ?></th>
                             <th><?= __('Id') ?></th>
                             <th><?= __('Pokemon Id') ?></th>
                             <th><?= __('Stat Id') ?></th>
@@ -71,6 +72,24 @@
                         </tr>
                         <?php foreach ($pokemon->pokemon_stats as $pokemonStats) : ?>
                         <tr>
+                            <td>
+                                <?php //Affichage du bon nom en fonction de l'id stats
+                                    $test=$pokemonStats->id;
+                                    if($test==1){
+                                        echo "Hp";
+                                    }elseif($test==2){
+                                        echo "Attack";
+                                    }elseif($test==3){
+                                        echo "Defense";
+                                    }elseif($test==4){
+                                        echo "special-attack";
+                                    }elseif($test==5){
+                                        echo "special-defense";
+                                    }elseif($test==6){
+                                        echo "speed";
+                                    }
+                                ?>
+                            </td>
                             <td><?= h($pokemonStats->id) ?></td>
                             <td><?= h($pokemonStats->pokemon_id) ?></td>
                             <td><?= h($pokemonStats->stat_id) ?></td>
