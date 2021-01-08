@@ -17,14 +17,48 @@
             <div class="container">
                 <div class="row"><!-- nouvelle maquette -->
                     <div class="col-sm-6">
-                        <p>Left here</p>
+                        <!-- !TODO creer un nouveau style css -->
+                        <img class="img-thumbnail" style="object-fit: cover;width:100%;height:100%;max-height:none" src="<?= h($pokemon->default_front_sprite_url) ?>" alt="default sprite">     
                     </div>
-                    <div class="col-sm-6">
-                        <p>right here</p>
+                    <div class="col-sm-6 table-responsive">
+                        <h3><?= h($pokemon->name) ?></h3>
+                        <span class="rounded-pill ">type1</span><span class="rounded-pill">type2</span>
+                            <table>
+                                <tr>
+                                    <th>HP</th>
+                                    <th>?</th>
+                                </tr>
+                                <tr>
+                                    <th>Defense</th>
+                                    <th>?</th>
+                                </tr>
+                                <tr>
+                                    <th>Attack</th>
+                                    <th>?</th>
+                                </tr>
+                                <tr>
+                                    <th>Special Attack</th>
+                                    <th>?</th>
+                                </tr>
+                                <tr>
+                                    <th>Special Defense</th>
+                                    <th>?</th>
+                                </tr>
+                                <tr>
+                                    <th>Speed</th>
+                                    <th>?</th>
+                                </tr>
+
+
+                            </table>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row"><!-- page originale -->
+                <!-- carousel -->
+                <div class="row">
+                </div>
+<!-- 
+                <div class="row"><!-- page originale --><!-- 
                     <h3><?= h($pokemon->name) ?></h3>
                     <table>
                         <tr>
