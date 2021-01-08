@@ -25,6 +25,14 @@
                     <td><?= h($pokemon->default_front_sprite_url) ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Default Back Sprite Url') ?></th>
+                    <td><?= h($pokemon->default_back_sprite_url) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Default Shiny Sprite Url') ?></th>
+                    <td><?= h($pokemon->default_shiny_sprite_url) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($pokemon->id) ?></td>
                 </tr>
