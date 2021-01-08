@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-sm-6 table-responsive">
                         <h3><?= h($pokemon->name) ?></h3>
-                        <span class="rounded-pill ">type1</span><span class="rounded-pill">type2</span>
+                        <span class="rounded-pill bg-secondary text-white mr-3 px-3 py-2">type1</span><span class="rounded-pill bg-secondary text-white mr-3 px-3 py-2">type2</span>
                             <table>
                                 <tr>
                                     <th>HP</th>
