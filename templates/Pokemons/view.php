@@ -74,7 +74,7 @@
                         <tr>
                             <td>
                                 <?php //Affichage du bon nom en fonction de l'id stats
-                                    $test=$pokemonStats->id;
+                                    $test=$pokemonStats->stat_id;
                                     if($test==1){
                                         echo "Hp";
                                     }elseif($test==2){
