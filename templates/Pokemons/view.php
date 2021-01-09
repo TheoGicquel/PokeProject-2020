@@ -74,19 +74,21 @@
                         <tr>
                             <td>
                                 <?php //Affichage du bon nom en fonction de l'id stats
-                                    $test=$pokemonStats->stat_id;
-                                    if($test==1){
+                                    $statAffichage=$pokemonStats->stat_id;
+                                    if($statAffichage==1){
                                         echo "Hp";
-                                    }elseif($test==2){
+                                    }elseif($statAffichage==2){
                                         echo "Attack";
-                                    }elseif($test==3){
+                                    }elseif($statAffichage==3){
                                         echo "Defense";
-                                    }elseif($test==4){
+                                    }elseif($statAffichage==4){
                                         echo "special-attack";
-                                    }elseif($test==5){
+                                    }elseif($statAffichage==5){
                                         echo "special-defense";
-                                    }elseif($test==6){
+                                    }elseif($statAffichage==6){
                                         echo "speed";
+                                    }else{
+                                        echo"Stats non reconnu";
                                     }
                                 ?>
                             </td>
