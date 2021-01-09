@@ -28,6 +28,51 @@ class PokemonsController extends AppController
         $this->set(compact('pokemons'));
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * Stats method
+     *
+     * @return \Cake\Http\Response|null|void Renders view
+     */
+    public function stats()
+    {
+        $this->paginate = [
+            'limit' => 30,
+        ];
+
+        $pokemons = $this->Pokemons->find('all')->contain(['PokemonStats.Stats', 'PokemonTypes.Types']);
+        $pokemons = $this->paginate($pokemons);
+
+        $this->set(compact('pokemons'));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
     /**
      * View method
      *
