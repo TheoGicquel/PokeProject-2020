@@ -25,14 +25,6 @@
                     <td><?= h($pokemon->default_front_sprite_url) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Default Back Sprite Url') ?></th>
-                    <td><?= h($pokemon->default_back_sprite_url) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Default Shiny Sprite Url') ?></th>
-                    <td><?= h($pokemon->default_shiny_sprite_url) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($pokemon->id) ?></td>
                 </tr>
@@ -63,7 +55,6 @@
                 <div class="table-responsive">
                     <table>
                         <tr>
-                            <th><?= __('Name Stats') ?></th>
                             <th><?= __('Id') ?></th>
                             <th><?= __('Pokemon Id') ?></th>
                             <th><?= __('Stat Id') ?></th>
@@ -72,26 +63,6 @@
                         </tr>
                         <?php foreach ($pokemon->pokemon_stats as $pokemonStats) : ?>
                         <tr>
-                            <td>
-                                <?php //Affichage du bon nom en fonction de l'id stats
-                                    $statAffichage=$pokemonStats->stat_id;
-                                    if($statAffichage==1){
-                                        echo "Hp";
-                                    }elseif($statAffichage==2){
-                                        echo "Attack";
-                                    }elseif($statAffichage==3){
-                                        echo "Defense";
-                                    }elseif($statAffichage==4){
-                                        echo "special-attack";
-                                    }elseif($statAffichage==5){
-                                        echo "special-defense";
-                                    }elseif($statAffichage==6){
-                                        echo "speed";
-                                    }else{
-                                        echo"Stats non reconnu";
-                                    }
-                                ?>
-                            </td>
                             <td><?= h($pokemonStats->id) ?></td>
                             <td><?= h($pokemonStats->pokemon_id) ?></td>
                             <td><?= h($pokemonStats->stat_id) ?></td>
