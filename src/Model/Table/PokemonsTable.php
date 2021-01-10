@@ -121,9 +121,9 @@ class PokemonsTable extends Table
         return [
             'pokedex_number' => $pokeApiData['id'],
             'name' => $pokeApiData['name'],
-            'default_front_sprite_url' => $pokeApiData['sprites']['front_default'],
-            'default_back_sprite_url' => $pokeApiData['sprites']['back_default'],
-            'shiny_front_sprite_url' => $pokeApiData['sprites']['front_shiny'],
+            'default_front_sprite_url' => ($pokeApiData['sprites']['front_default'] ? $pokeApiData['sprites']['front_default'] : 'unknown.png'),
+            'default_back_sprite_url' => ($pokeApiData['sprites']['back_default'] ? $pokeApiData['sprites']['front_default'] : 'unknown.png'),
+            'shiny_front_sprite_url' => ($pokeApiData['sprites']['front_shiny'] ? $pokeApiData['sprites']['front_default'] : 'unknown.png'),
             'height' => $pokeApiData['height'],
             'weight' => $pokeApiData['weight'],
             'pokemon_stats' => $pokemonStats,
