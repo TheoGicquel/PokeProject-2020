@@ -99,10 +99,10 @@ class PokemonsTable extends Table
             ->allowEmptyString('default_back_sprite_url', 'true');
 
         $validator
-            ->scalar('default_shiny_sprite_url')
-            ->maxLength('default_shiny_sprite_url', 255)
-            ->requirePresence('default_shiny_sprite_url', 'create')
-            ->allowEmptyString('default_shiny_sprite_url', 'true');
+            ->scalar('shiny_front_sprite_url')
+            ->maxLength('shiny_front_sprite_url', 255)
+            ->requirePresence('shiny_front_sprite_url', 'create')
+            ->allowEmptyString('shiny_front_sprite_url', 'true');
 
         return $validator;
     }
