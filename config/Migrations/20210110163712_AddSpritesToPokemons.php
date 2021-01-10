@@ -17,12 +17,12 @@ class AddSpritesToPokemons extends AbstractMigration
         $table = $this->table('pokemons');
 
         $table->addColumn('default_back_sprite_url', 'string', [
-            'default' => null,
+            'default' => 'unknown.png',
             'limit' => 255,
             'null' => false,
         ]);
-        $table->addColumn('default_shiny_sprite_url', 'string', [
-            'default' => null,
+        $table->addColumn('shiny_front_sprite_url', 'string', [
+            'default' => 'unknown.png',
             'limit' => 255,
             'null' => false,
         ]);

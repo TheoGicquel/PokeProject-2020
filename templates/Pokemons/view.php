@@ -30,7 +30,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Default Shiny Sprite Url') ?></th>
-                    <td><?= h($pokemon->default_shiny_sprite_url) ?></td>
+                    <td><?= h($pokemon->shiny_front_sprite_url) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>

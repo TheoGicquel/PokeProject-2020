@@ -14,7 +14,7 @@ use Cake\ORM\Entity;
  * @property int $weight
  * @property string $default_front_sprite_url 
  * @property string $default_back_sprite_url 
- * @property string $default_shiny_sprite_url
+ * @property string $shiny_front_sprite_url
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
@@ -65,7 +65,7 @@ class Pokemon extends Entity
      */
     protected function _getShinySprite()
     {
-        return $this->default_shiny_sprite_url ? $this->default_shiny_sprite_url : 'unknown.png'; 
+        return $this->shiny_front_sprite_url ? $this->shiny_front_sprite_url : 'unknown.png'; 
     }
 
     /**
