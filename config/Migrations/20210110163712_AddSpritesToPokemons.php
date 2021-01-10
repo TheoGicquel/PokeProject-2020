@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use Migrations\AbstractMigration;
 
-class AddSpritesToPokemon extends AbstractMigration
+class AddSpritesToPokemons extends AbstractMigration
 {
     /**
      * Change Method.
@@ -14,7 +14,7 @@ class AddSpritesToPokemon extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('pokemon');
+        $table = $this->table('pokemons');
         $table->addColumn('sprite_front', 'string', [
             'default' => null,
             'limit' => 255,
