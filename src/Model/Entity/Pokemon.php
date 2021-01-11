@@ -12,6 +12,7 @@ use Cake\ORM\Entity;
  * @property string $name
  * @property int $height
  * @property int $weight
+ * @property int $generation
  * @property string $default_front_sprite_url 
  * @property string $default_back_sprite_url 
  * @property string $shiny_front_sprite_url
