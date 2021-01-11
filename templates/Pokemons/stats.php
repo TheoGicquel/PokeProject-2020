@@ -43,16 +43,23 @@ $fastestPokemon = $query->all();
     <h4>Nombre de pokémons de type fée entre les générations 1, 3 et 7 (donc générations 2, 4, 5 et 6) :</h4>
     <p><?= h($fairyNumber->fairyNumber) ?></p>
 
-    <?php $index = 1;
-
-    foreach ($fastestPokemon as $pokemon) : ?>
-
+    <table>
         <tr>
-            <th><?= $index ?></th>
-            <th><?= h($pokemon->name) ?></td>
-            <th><?= h($pokemon->pokemon_stats['value']) ?></th>
+            <th>Position</th>
+            <th>Nom</td>
+            <th>Vitesse</th>
         </tr>
+        <?php $index = 1;
     
-        <?php $index++;
-    endforeach; ?>
+        foreach ($fastestPokemon as $pokemon) : ?>
+    
+            <tr>
+                <th><?= $index ?></th> <!--Affichage de la position dans le classement du pokemon-->
+                <th><?= h($pokemon->name) ?></td> <!--Affichage du nom du pokemon-->
+                <th><?= h($pokemon->pokemon_stats['value']) ?></th> <!--Affichage de la vitesse du pokemon-->
+            </tr>
+        
+            <?php $index++;
+        endforeach; ?>
+    </table>
 </div>
