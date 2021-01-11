@@ -69,13 +69,13 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img class="" style="width:20%;height:20%; margin:0 auto;" src="<?= h($pokemon->default_front_sprite_url) ?>" alt="First slide">
+                            <img class="d-block w-15" style="width:20%;height:20%; margin:0 auto;" src="<?= h($pokemon->default_front_sprite_url) ?>" alt="First slide">
                           </div>
                           <div class="carousel-item active">
-                            <img class="" style="width:20%;height:20%" src="<?= h($pokemon->default_back_sprite_url) ?>" alt="Second slide">
+                            <img class="d-block w-15" style="width:20%;height:20%; margin:0 auto;" src="<?= h($pokemon->default_back_sprite_url) ?>" alt="Second slide">
                           </div>
                           <div class="carousel-item active">
-                            <img class="" style="width:20%;height:20%" src="<?= h($pokemon->shiny_front_sprite_url) ?>" alt="Third slide">
+                            <img class="d-block w-15" style="width:20%;height:20%; margin:0 auto;" src="<?= h($pokemon->shiny_front_sprite_url) ?>" alt="Third slide">
                           </div>
                         </div>
                         <a class="carousel-control-prev" style="background-color: grey;" href="#carouselExampleControls" role="button" data-slide="prev">
