@@ -16,9 +16,9 @@
         <div class="pokemons view content">
             <div class="container">
                 <div class="row"><!-- nouvelle maquette -->
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 img-thumbnail" style="border:2px solid #dee2e6; padding:10%; border-radius:100%">
                         <!-- !TODO creer un nouveau style css -->
-                        <img class="img-thumbnail" style="object-fit: cover;width:100%;height:100%;max-height:none" src="<?= h($pokemon->default_front_sprite_url) ?>" alt="default sprite">     
+                        <img  style="object-fit: cover;width:100%;height:100%;max-height:none" src="<?= h($pokemon->default_front_sprite_url) ?>" alt="default sprite">     
                     </div>
                     <div class="col-sm-6 table-responsive">
                         <h3><?= h($pokemon->name) ?></h3>
