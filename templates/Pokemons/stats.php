@@ -37,11 +37,22 @@ $fastestPokemon = $query->all();
 
 ?>
 <div class="pokemons index content">
-    <h4>Poids moyen des pokémons de la 4éme génération :</h4>
-    <p><?= h($averageWeight->averageWeight) ?></p>
 
-    <h4>Nombre de pokémons de type fée entre les générations 1, 3 et 7 (donc générations 2, 4, 5 et 6) :</h4>
-    <p><?= h($fairyNumber->fairyNumber) ?></p>
+    <h4>Poids moyen des pokémons de la 4éme génération :</h4>
+    <table>
+        <tr>
+            <th>Poid</th>
+            <td><?= h($averageWeight->averageWeight) ?></td>
+        </tr>
+    </table>
+
+    <h4>Nombre de pokémons de type fée entre les générations 1, 3 et 7 (donc cumule des générations 2, 4, 5 et 6) :</h4>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <td><?= h($fairyNumber->fairyNumber) ?></td>
+        </tr>
+    </table>
 
     <table>
         <tr>
@@ -50,9 +61,9 @@ $fastestPokemon = $query->all();
             <th>Vitesse</th>
         </tr>
         <?php $index = 1;
-    
+
         foreach ($fastestPokemon as $pokemon) : ?>
-    
+
             <tr>
                 <th><?= $index ?></th> <!--Affichage de la position dans le classement du pokemon-->
                 <th><?= h($pokemon->name) ?></td> <!--Affichage du nom du pokemon-->
