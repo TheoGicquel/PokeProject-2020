@@ -22,7 +22,12 @@
                     </div>
                     <div class="col-sm-6 table-responsive">
                         <h3><?= h($pokemon->name) ?></h3>
-                        <span class="rounded-pill bg-secondary text-white mr-3 px-3 py-2">type1</span><span class="rounded-pill bg-secondary text-white mr-3 px-3 py-2">type2</span>
+                            <?php if (!empty($pokemon->pokemon_types)) : ?>
+                                <?php foreach ($pokemon->pokemon_types as $pokemonTypes) : ?>
+                                    <span class="rounded-pill bg-secondary text-white mr-3 px-3 py-2 "><?= h($nameOfType[$pokemonTypes->type_id]) ?></span>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+
                         <table>
                         <tr>
                             <th><?= __('Name Stats') ?></th>
