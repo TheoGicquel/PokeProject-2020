@@ -53,7 +53,7 @@ class PokemonsTable extends Table
             'saveStrategy' => 'replace',
         ]);
         $this->hasMany('PokemonTypes', [
-           'foreignKey' => 'pokemon_id',
+            'foreignKey' => 'pokemon_id',
             'saveStrategy' => 'replace',
         ]);
     }
@@ -90,22 +90,19 @@ class PokemonsTable extends Table
             ->scalar('default_front_sprite_url')
             ->maxLength('default_front_sprite_url', 255)
             ->requirePresence('default_front_sprite_url', 'create')
-            //->allowEmptyString('default_front_sprite_url', 'true');
-            ->notEmptyString('default_front_sprite_url');
+            ->allowEmptyString('default_front_sprite_url', 'true');
             
         $validator
             ->scalar('default_back_sprite_url')
             ->maxLength('default_back_sprite_url', 255)
             ->requirePresence('default_back_sprite_url', 'create')
-            //->allowEmptyString('default_back_sprite_url', 'true');
-            ->notEmptyString('default_back_sprite_url');
+            ->allowEmptyString('default_back_sprite_url', 'true');
 
         $validator
-            ->scalar('shiny_front_sprite_url')
-            ->maxLength('shiny_front_sprite_url', 255)
-            ->requirePresence('shiny_front_sprite_url', 'create')
-            //->allowEmptyString('shiny_front_sprite_url', 'true');
-            ->notEmptyString('shiny_front_sprite_url');
+            ->scalar('default_shiny_sprite_url')
+            ->maxLength('default_shiny_sprite_url', 255)
+            ->requirePresence('default_shiny_sprite_url', 'create')
+            ->allowEmptyString('default_shiny_sprite_url', 'true');
 
         return $validator;
     }
@@ -124,9 +121,9 @@ class PokemonsTable extends Table
         return [
             'pokedex_number' => $pokeApiData['id'],
             'name' => $pokeApiData['name'],
-            'default_front_sprite_url' => ($pokeApiData['sprites']['front_default'] ? $pokeApiData['sprites']['front_default'] : 'unknown.png'),
-            'default_back_sprite_url' => ($pokeApiData['sprites']['back_default'] ? $pokeApiData['sprites']['back_default'] : 'unknown.png'),
-            'shiny_front_sprite_url' => ($pokeApiData['sprites']['front_shiny'] ? $pokeApiData['sprites']['front_shiny'] : 'unknown.png'),
+            'default_front_sprite_url' => $pokeApiData['sprites']['front_default'],
+            'default_back_sprite_url' => $pokeApiData['sprites']['back_default'],
+            'default_shiny_sprite_url' => $pokeApiData['sprites']['front_shiny'],
             'height' => $pokeApiData['height'],
             'weight' => $pokeApiData['weight'],
             'pokemon_stats' => $pokemonStats,

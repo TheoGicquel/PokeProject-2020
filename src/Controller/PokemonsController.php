@@ -41,11 +41,7 @@ class PokemonsController extends AppController
             'contain' => ['PokemonStats.Stats', 'PokemonTypes.Types'],
         ]);
 
-        // on recupere le nom d'un type par son id
-        $nameOfType = $this->getTableLocator()->get('types')->find()->all()->combine("id","name")->toArray();
-
         $this->set(compact('pokemon'));
-        $this->set(compact('nameOfType'));
     }
 
     /**
