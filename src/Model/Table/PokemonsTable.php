@@ -131,6 +131,7 @@ class PokemonsTable extends Table
             'weight' => $pokeApiData['weight'],
             'pokemon_stats' => $pokemonStats,
             'pokemon_types' => $pokemonTypes,
+            'generation' => $pokeApiData['generation'],
         ];
     }
 }
