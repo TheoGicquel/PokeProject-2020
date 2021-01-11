@@ -21,6 +21,20 @@ $query->select(['fairyNumber' => $query->func()->count('*')])
 ->andwhere(['OR' => [['pokemons.generation' => 2], ['pokemons.generation' => 4], ['pokemons.generation' => 5], ['pokemons.generation' => 6]]]);
 $fairyNumber = $query->first();
 
+
+
+
+
+//Obtention des 10 premier pokemons qui possède la plus grande vitesse
+$query = $pokemons->find()->Join('pokemon_stats')->Join('stats');
+$query->select(['pokemons.name'])
+->where(['stats.name' => 'speed'])
+->andwhere(['pokemon_stats.stat_id = stats.id'])
+->andwhere(['pokemons.id = pokemon_stats.pokemon_id'])
+->order(['pokemon_stats.value' => 'DESC'])
+->limit(10);
+$fastestPokemon = $query->all();
+
 ?>
 <div class="pokemons index content">
     <h4>Poids moyen des pokémons de la 4éme génération :</h4>
@@ -29,4 +43,9 @@ $fairyNumber = $query->first();
     <h4>Nombre de pokémons de type fée entre les générations 1, 3 et 7 (donc générations 2, 4, 5 et 6) :</h4>
     <p><?= h($fairyNumber->fairyNumber) ?></p>
 
+    <?php foreach ($fastestPokemon as $pokemon) : ?>
+
+        <p><?= h($pokemon->name) ?></p>
+
+    <?php endforeach; ?>
 </div>
