@@ -93,3 +93,28 @@ $routes->scope('/', function (RouteBuilder $builder) {
  * });
  * ```
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$routes->scope('/stats', function (RouteBuilder $builder) {
+    $builder->registerMiddleware('csrf', new CsrfProtectionMiddleware([
+        'httponly' => true,
+    ]));
+
+    $builder->connect('/stats', ['controller' => 'Pokemons', 'action' => 'stats', 'stats']);
+
+    $builder->connect('/pokemons/*', 'Pokemons::stats');
+
+    $builder->fallbacks();
+});
