@@ -63,8 +63,9 @@
                     </div>
                 </div>
                 <!-- carousel -->
-                <div class="row">
-                <div class="col-sm-12">
+                <div class="row" style="padding-top: 2%;">
+                
+                <!--Carousel non fonctionnel
                     <div>
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
@@ -86,10 +87,13 @@
                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
                           <span class="sr-only">Next</span>
                         </a>
-                    </div>
-                <img src="">
-                <img src="<?= h($pokemon->default_back_sprite_url) ?>">
-                <img src="<?= h($pokemon->shiny_front_sprite_url) ?>">
+                    </div>-->
+                
+                    <div class="col-sm-4"><img style="width:100%;height:auto;border:solid 1px #dee2e6" src="<?= h($pokemon->default_front_sprite_url) ?>"></div>
+                    <div class="col-sm-4"><img style="width:100%;height:auto;border:solid 1px #dee2e6" src="<?= h($pokemon->default_back_sprite_url) ?>"></div>
+                    <div class="col-sm-4"><img style="width:100%;height:auto;border:solid 1px #dee2e6" src="<?= h($pokemon->shiny_front_sprite_url) ?>"></div>
+                </div>
+
                     </div>
                 </div>
                 </div>
