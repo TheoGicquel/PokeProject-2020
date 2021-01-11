@@ -8,7 +8,25 @@ $query = $pokemons->find();
 $query->select(['averageWeight' => $query->func()->avg('weight')])->where(['generation' => 0]);
 $averageWeight = $query->first();
 
+
+
+
+
+//Obtention du nombre de pokemon fée cumulée des générations 2, 4, 5 et 6
+$query = $pokemons->find()->Join('pokemon_types')->Join('types');
+$query->select(['fairyNumber' => $query->func()->count('*')])
+->where(['types.name' => 'fairy'])
+->andwhere(['pokemon_types.type_id = types.id'])
+->andwhere(['pokemons.id = pokemon_types.pokemon_id'])
+->andwhere(['OR' => [['pokemons.generation' => 2], ['pokemons.generation' => 4], ['pokemons.generation' => 5], ['pokemons.generation' => 6]]]);
+$fairyNumber = $query->first();
+
 ?>
 <div class="pokemons index content">
+    <h4>Poids moyen des pokémons de la 4éme génération :</h4>
     <p><?= h($averageWeight->averageWeight) ?></p>
+
+    <h4>Nombre de pokémons de type fée entre les générations 1, 3 et 7 (donc générations 2, 4, 5 et 6) :</h4>
+    <p><?= h($fairyNumber->fairyNumber) ?></p>
+
 </div>
