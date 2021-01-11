@@ -16,9 +16,9 @@
         <div class="pokemons view content">
             <div class="container">
                 <div class="row"><!-- nouvelle maquette -->
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 img-thumbnail" style="border:2px solid #dee2e6; padding:10%; border-radius:100%">
                         <!-- !TODO creer un nouveau style css -->
-                        <img class="img-thumbnail" style="object-fit: cover;width:100%;height:100%;max-height:none" src="<?= h($pokemon->default_front_sprite_url) ?>" alt="default sprite">     
+                        <img  style="object-fit: cover;width:100%;height:100%;max-height:none" src="<?= h($pokemon->default_front_sprite_url) ?>" alt="default sprite">     
                     </div>
                     <div class="col-sm-6 table-responsive">
                         <h3><?= h($pokemon->name) ?></h3>
@@ -65,10 +65,32 @@
                 <!-- carousel -->
                 <div class="row">
                 <div class="col-sm-12">
-                <img src="<?= h($pokemon->default_front_sprite_url) ?>">
+                    <div>
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img class="" style="width:20%;height:20%; margin:0 auto;" src="<?= h($pokemon->default_front_sprite_url) ?>" alt="First slide">
+                          </div>
+                          <div class="carousel-item active">
+                            <img class="" style="width:20%;height:20%" src="<?= h($pokemon->default_back_sprite_url) ?>" alt="Second slide">
+                          </div>
+                          <div class="carousel-item active">
+                            <img class="" style="width:20%;height:20%" src="<?= h($pokemon->shiny_front_sprite_url) ?>" alt="Third slide">
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" style="background-color: grey;" href="#carouselExampleControls" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" style="background-color: grey;" href="#carouselExampleControls" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                <img src="">
                 <img src="<?= h($pokemon->default_back_sprite_url) ?>">
                 <img src="<?= h($pokemon->shiny_front_sprite_url) ?>">
-
+                    </div>
                 </div>
                 </div>
             </div> <!-- /container -->
