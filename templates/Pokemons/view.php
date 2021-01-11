@@ -23,34 +23,40 @@
                     <div class="col-sm-6 table-responsive">
                         <h3><?= h($pokemon->name) ?></h3>
                         <span class="rounded-pill bg-secondary text-white mr-3 px-3 py-2">type1</span><span class="rounded-pill bg-secondary text-white mr-3 px-3 py-2">type2</span>
-                            <table>
-                                <tr>
-                                    <th>HP</th>
-                                    <th>?</th>
-                                </tr>
-                                <tr>
-                                    <th>Defense</th>
-                                    <th>?</th>
-                                </tr>
-                                <tr>
-                                    <th>Attack</th>
-                                    <th>?</th>
-                                </tr>
-                                <tr>
-                                    <th>Special Attack</th>
-                                    <th>?</th>
-                                </tr>
-                                <tr>
-                                    <th>Special Defense</th>
-                                    <th>?</th>
-                                </tr>
-                                <tr>
-                                    <th>Speed</th>
-                                    <th>?</th>
-                                </tr>
-
-
-                            </table>
+                        <table>
+                        <tr>
+                            <th><?= __('Name Stats') ?></th>
+                            <th><?= __('Value') ?></th>
+                        </tr>
+                        <?php foreach ($pokemon->pokemon_stats as $pokemonStats) : ?>
+                        <tr>
+                            <td>
+                                <?php //Affichage du bon nom en fonction de l'id stats
+                                    $statAffichage=$pokemonStats->stat_id;
+                                    if($statAffichage==1){
+                                        echo "Hp";
+                                    }elseif($statAffichage==2){
+                                        echo "Attack";
+                                    }elseif($statAffichage==3){
+                                        echo "Defense";
+                                    }elseif($statAffichage==4){
+                                        echo "special-attack";
+                                    }elseif($statAffichage==5){
+                                        echo "special-defense";
+                                    }elseif($statAffichage==6){
+                                        echo "speed";
+                                    }else{
+                                        echo"Stats non reconnu";
+                                    }
+                                ?>
+                            </td>
+                            
+                            
+                            
+                            <td><?= h($pokemonStats->value) ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </table>
                         </div>
                     </div>
                 </div>
