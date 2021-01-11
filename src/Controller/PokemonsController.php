@@ -44,11 +44,11 @@ class PokemonsController extends AppController
 
 
     /**
-     * Stats method
+     * Dashboard method
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function stats()
+    public function dashboard()
     {
         $this->paginate = [
             'limit' => 30,

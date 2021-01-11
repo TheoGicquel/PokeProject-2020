@@ -107,14 +107,14 @@ $routes->scope('/', function (RouteBuilder $builder) {
 
 
 
-$routes->scope('/stats', function (RouteBuilder $builder) {
+$routes->scope('/dashboard', function (RouteBuilder $builder) {
     $builder->registerMiddleware('csrf', new CsrfProtectionMiddleware([
         'httponly' => true,
     ]));
 
-    $builder->connect('/stats', ['controller' => 'Pokemons', 'action' => 'stats', 'stats']);
+    $builder->connect('/dashboard', ['controller' => 'Pokemons', 'action' => 'dashboard', 'dashboard']);
 
-    $builder->connect('/pokemons/*', 'Pokemons::stats');
+    $builder->connect('/pokemons/*', 'Pokemons::dashboard');
 
     $builder->fallbacks();
 });

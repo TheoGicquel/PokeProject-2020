@@ -38,6 +38,8 @@ $fastestPokemons = $query->all();
 
 
 <!--Mise en forme des information sur la page (stats)-->
+<h1>Dashboard / Tableau de bord et Statistiques</h1>
+
 <h4>Poids moyen des pokémons de la 4éme génération :</h4>
 <table>
     <tr>
